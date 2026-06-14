@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Looked – Gizlilik Politikası</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary:    #C47D68;
+      --secondary:  #7A8C74;
+      --bg:         #FAF8F5;
+      --surface:    #FFFFFF;
+      --text:       #2C2C2C;
+      --muted:      #6B6B6B;
+      --border:     #E8E4DF;
+      --radius:     14px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 0 16px 80px;
+    }
+
+    header {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 56px 0 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: -0.5px;
+    }
+
+    header h1 {
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .meta {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+    }
+
+    section h2 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    section h2::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 16px;
+      background: var(--primary);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    p { font-size: 15px; color: var(--text); margin-bottom: 10px; }
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      padding-left: 18px;
+      margin-top: 6px;
+    }
+
+    ul li {
+      font-size: 15px;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    ul li:last-child { margin-bottom: 0; }
+
+    .chip-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+      list-style: none;
+      padding: 0;
+    }
+
+    .chip-list li {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      padding: 4px 14px;
+      font-size: 13px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .highlight {
+      background: #FDF6F3;
+      border-left: 3px solid var(--primary);
+      border-radius: 0 8px 8px 0;
+      padding: 12px 16px;
+      margin-top: 12px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    footer {
+      max-width: 720px;
+      margin: 48px auto 0;
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 600px) {
+      section { padding: 20px 18px; }
+      header { padding: 36px 0 28px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <span class="logo">Looked</span>
+  <h1>Gizlilik Politikası</h1>
+  <span class="meta">Son güncelleme: 4 Haziran 2026 &nbsp;·&nbsp; Geliştirici: Egemen Bozca (Egebo)</span>
+</header>
+
+<main>
+
+  <section>
+    <h2>Genel Bakış</h2>
+    <p>Looked, kişisel stil yönetiminize yardımcı olan bir mobil uygulamadır. Bu politika, uygulamayı kullanırken hangi verilerinizin toplandığını, nasıl kullanıldığını ve nasıl korunduğunu açıklar.</p>
+    <p>Uygulamayı kullanarak bu politikayı kabul etmiş sayılırsınız. 13 yaşın altındaki kullanıcılar uygulamayı kullanamaz.</p>
+  </section>
+
+  <section>
+    <h2>Topladığımız Veriler</h2>
+    <p>Looked aşağıdaki bilgileri toplar:</p>
+    <ul>
+      <li><strong>Hesap bilgileri:</strong> Google veya Apple Sign-In aracılığıyla e-posta adresi, görünen ad ve kullanıcı adı</li>
+      <li><strong>Gardırop görselleri:</strong> Eklediğiniz kıyafet fotoğrafları (Firebase Storage'da saklanır)</li>
+      <li><strong>Stil verileri:</strong> Stil testi sonuçları ve kombin geçmişiniz (Firestore'da saklanır)</li>
+      <li><strong>Topluluk içerikleri:</strong> Paylaştığınız gönderiler ve yorumlar</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Yapay Zeka Analizi</h2>
+    <p>Kıyafet analizi özelliğini kullandığınızda fotoğrafınız Google Gemini AI'a gönderilir. Bu işlem yalnızca <strong>açık onayınızla</strong> gerçekleşir.</p>
+    <div class="highlight">
+      Google Gemini AI, analiz tamamlandıktan sonra fotoğrafınızı saklamaz. Görsel yalnızca işlem süresince aktarılır.
+    </div>
+  </section>
+
+  <section>
+    <h2>Çalıştığımız Üçüncü Taraflar</h2>
+    <p>Uygulama aşağıdaki servislerden yararlanır:</p>
+    <ul class="chip-list">
+      <li>Firebase (Google LLC)</li>
+      <li>Google Gemini AI</li>
+      <li>RevenueCat</li>
+      <li>Google Sign-In</li>
+      <li>Apple Sign-In</li>
+    </ul>
+    <p style="margin-top: 14px;">Bu servislerin kendi gizlilik politikaları geçerlidir. Verileriniz pazarlama amacıyla hiçbir üçüncü tarafla paylaşılmaz.</p>
+  </section>
+
+  <section>
+    <h2>Verilerinizi Nasıl Kullanıyoruz</h2>
+    <ul>
+      <li>Uygulamanın temel özelliklerini sunmak</li>
+      <li>Gardırop ve stil geçmişinizi yönetmek</li>
+      <li>Topluluk özelliklerini çalıştırmak</li>
+      <li>Uygulama güvenliğini ve işleyişini sağlamak</li>
+    </ul>
+    <p style="margin-top: 10px;">Verileriniz reklam, pazarlama veya profil çıkarma amacıyla kullanılmaz.</p>
+  </section>
+
+  <section>
+    <h2>Hesap Silme</h2>
+    <p>Hesabınızı sildiğinizde; gardırop görselleriniz, stil verileriniz, topluluk gönderileriniz ve tüm kişisel bilgileriniz kalıcı olarak silinir.</p>
+    <p>Silme talebi için <a href="mailto:bozcaegemen@gmail.com">bozcaegemen@gmail.com</a> adresine ulaşabilirsiniz.</p>
+  </section>
+
+  <section>
+    <h2>İletişim</h2>
+    <p>Gizlilik politikasıyla ilgili sorularınız için:</p>
+    <p><a href="mailto:bozcaegemen@gmail.com">bozcaegemen@gmail.com</a></p>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 Egemen Bozca · Looked</p>
+</footer>
+
+</body>
+</html>
